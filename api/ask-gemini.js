@@ -4,11 +4,12 @@ const cors = require("cors");
 const allowedOrigin = 'https://Akarshj2003.github.io';
 const allowedOriginDev = 'http://localhost:5173';
 
+
 const corsMiddleware = cors((req, callback) => {
   const origin = req.headers.origin;
   let corsOptions;
 
-  
+
   if (origin === allowedOrigin || origin === allowedOriginDev) {
     corsOptions = { origin: true }; // Allow this origin
   } else {
